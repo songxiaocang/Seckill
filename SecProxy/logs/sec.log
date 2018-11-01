@@ -1,0 +1,63 @@
+2018/10/31 22:28:31.274 [I] [main.go:16]  init sec success
+2018/10/31 22:28:31.354 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 01:38:08.718 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:40:54.466 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:44:36.600 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:47:15.579 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:48:54.445 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:51:06.956 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:51:34.317 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 01:59:48.120 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+2018/11/01 02:00:00.197 [D] [init.go:134]  init etcd succ
+2018/11/01 02:00:02.755 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:30:26.409 [D] [init.go:134]  init etcd succ
+2018/11/01 02:30:28.963 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:31:57.081 [D] [init.go:144]  data key:/zcz/secskill/product,data value:[{"ProductId":1,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 02:31:57.081 [E] [init.go:144]  unmarshal data error:json: Unmarshal(non-pointer []main.SecProductInfo)
+2018/11/01 02:31:57.081 [E] [main.go:16]  init secConf error: json: Unmarshal(non-pointer []main.SecProductInfo)
+
+2018/11/01 02:32:34.576 [D] [init.go:144]  data key:/zcz/secskill/product,data value:[{"ProductId":1,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 02:32:34.576 [D] [init.go:144]  unmarshal data:[{%!s(int=1) %!s(int=1541000797) %!s(int=1541001797) %!s(int=1) %!s(int=1000) %!s(int=1000)} {%!s(int=3) %!s(int=1541000797) %!s(int=1541001797) %!s(int=1) %!s(int=2000) %!s(int=2000)}]
+2018/11/01 02:32:34.576 [I] [main.go:16]  init sec success
+2018/11/01 02:32:34.671 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 02:34:01.754 [I] [main.go:16]  init sec success
+2018/11/01 02:34:01.812 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 02:35:36.585 [D] [init.go:138]  init etcd succ
+2018/11/01 02:35:39.151 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:38:14.977 [D] [init.go:135]  init etcd succ
+2018/11/01 02:38:17.534 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:43:34.034 [D] [init.go:135]  init etcd succ
+2018/11/01 02:43:36.587 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:44:32.387 [D] [init.go:135]  init etcd succ
+2018/11/01 02:44:34.942 [E] [main.go:16]  init secConf error: read seckey config from etcd error:rpc error: code = Canceled desc = grpc: the client connection is closing
+
+2018/11/01 02:46:47.424 [D] [init.go:135]  init etcd succ
+2018/11/01 02:46:47.427 [D] [init.go:141]  data key:/zcz/secskill/product,data value:[{"ProductId":1,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 02:46:47.427 [D] [init.go:141]  unmarshal data:[{%!s(int=1) %!s(int=1541000797) %!s(int=1541001797) %!s(int=1) %!s(int=1000) %!s(int=1000)} {%!s(int=3) %!s(int=1541000797) %!s(int=1541001797) %!s(int=1) %!s(int=2000) %!s(int=2000)}]
+2018/11/01 02:46:47.427 [I] [main.go:16]  init sec success
+2018/11/01 02:46:47.499 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 02:50:02.832 [D] [init.go:135]  init etcd succ
+2018/11/01 02:50:02.834 [D] [init.go:141]  data key:/zcz/secskill/product,data value:[{"ProductId":1,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 02:50:02.834 [D] [init.go:141]  unmarshal data:[{1 1541000797 1541001797 1 1000 1000} {3 1541000797 1541001797 1 2000 2000}]
+2018/11/01 02:50:02.834 [I] [main.go:16]  init sec success
+2018/11/01 02:50:02.900 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 16:19:54.594 [D] [init.go:195]  init etcd succ
+2018/11/01 16:21:43.342 [D] [init.go:201]  data key:/zcz/secskill/product,data value:[{"ProductId":1,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 16:21:43.342 [D] [init.go:201]  unmarshal data:[{1 1541000797 1541001797 1 1000 1000} {3 1541000797 1541001797 1 2000 2000}]
+2018/11/01 16:21:43.342 [I] [main.go:16]  init sec success
+2018/11/01 16:21:43.344 [D] [asm_amd64.s:1333]  start watch
+2018/11/01 16:21:43.483 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
+2018/11/01 16:23:13.755 [D] [asm_amd64.s:1333]  get config from etcd succ,type:PUT, key:"/zcz/secskill/product",value:"[{\"ProductId\":2,\"StartTime\":1541000797,\"EndTime\":1541001797,\"Status\":1,\"Total\":1000,\"Left\":1000},{\"ProductId\":3,\"StartTime\":1541000797,\"EndTime\":1541001797,\"Status\":1,\"Total\":2000,\"Left\":2000}]"
+2018/11/01 16:23:13.755 [D] [asm_amd64.s:1333]  get config from etcd succ,cofig:[{2 1541000797 1541001797 1 1000 1000} {3 1541000797 1541001797 1 2000 2000}]
+2018/11/01 22:16:11.250 [D] [init.go:196]  init etcd succ
+2018/11/01 22:16:11.253 [D] [init.go:202]  data key:/zcz/secskill/product,data value:[{"ProductId":2,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":1000,"Left":1000},{"ProductId":3,"StartTime":1541000797,"EndTime":1541001797,"Status":1,"Total":2000,"Left":2000}]
+2018/11/01 22:16:11.253 [D] [init.go:202]  unmarshal data:[{2 1541000797 1541001797 1 1000 1000} {3 1541000797 1541001797 1 2000 2000}]
+2018/11/01 22:16:11.254 [D] [init.go:208]  init service begin,data:{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /zcz/secskill /zcz/secskill/product} map[3:0xc000162cf0 2:0xc000162cf0] {{0 0} 0 0 0 0} ./logs/sec.log debug}
+2018/11/01 22:16:11.254 [I] [main.go:16]  init sec success
+2018/11/01 22:16:11.255 [D] [asm_amd64.s:1333]  start watch
+2018/11/01 22:16:11.349 [I] [asm_amd64.s:1333]  http server Running on http://0.0.0.0:8082
