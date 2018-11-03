@@ -11,27 +11,27 @@ import (
 type SecProductInfo struct {
 	ProductId int
 	StartTime int
-	EndTime int
-	Status int
-	Total int
-	Left int
+	EndTime   int
+	Status    int
+	Total     int
+	Left      int
 }
 
-const etcdKey="/zcz/secskill/product"
+const etcdKey = "/zcz/secskill/product"
 
-func main(){
+func main() {
 	setConfToEtcd()
 }
 
 var err error
 
-func setConfToEtcd(){
-	cli,err := clientv3.New(clientv3.Config{
-		Endpoints:[]string{"127.0.0.1:2379"},
-		DialTimeout: 5*time.Second,
+func setConfToEtcd() {
+	cli, err := clientv3.New(clientv3.Config{
+		Endpoints:   []string{"127.0.0.1:2379"},
+		DialTimeout: 5 * time.Second,
 	})
-	if err!=nil {
-		logs.Error("init etcdClient error:%v",err)
+	if err != nil {
+		logs.Error("init etcdClient error:%v", err)
 		return
 	}
 
@@ -42,51 +42,51 @@ func setConfToEtcd(){
 
 	secProductInfoArr = append(secProductInfoArr,
 		SecProductInfo{
-			ProductId:2,
-			StartTime:1541000797,
-			EndTime:1541001797,
-			Status:1,
-			Total:1000,
-			Left:1000,
+			ProductId: 4,
+			StartTime: 1541221561,
+			EndTime:   1541239561,
+			Status:    0,
+			Total:     1000,
+			Left:      1000,
 		},
 	)
 
 	secProductInfoArr = append(secProductInfoArr,
 		SecProductInfo{
-			ProductId:3,
-			StartTime:1541000797,
-			EndTime:1541001797,
-			Status:1,
-			Total:2000,
-			Left:2000,
+			ProductId: 5,
+			StartTime: 1541221561,
+			EndTime:   1541239561,
+			Status:    0,
+			Total:     2000,
+			Left:      2000,
 		},
 	)
 
 	secProductJson, err := json.Marshal(secProductInfoArr)
-	logs.Debug("marshal data:%s",string(secProductJson))
-	if err!=nil {
-		logs.Error("secProductInfoArr json marshal err:%v",err)
+	logs.Debug("marshal data:%s", string(secProductJson))
+	if err != nil {
+		logs.Error("secProductInfoArr json marshal err:%v", err)
 		return
 	}
 
 	context1, cancel := context.WithTimeout(context.Background(), time.Second)
 	_, err = cli.Put(context1, etcdKey, string(secProductJson))
 	cancel()
-	if err!=nil {
-		logs.Error("put data to etcd error:%v",err)
+	if err != nil {
+		logs.Error("put data to etcd error:%v", err)
 		return
 	}
 
 	context2, cancel := context.WithTimeout(context.Background(), time.Second)
 	resp, err := cli.Get(context2, etcdKey)
 	cancel()
-	if err!=nil {
-		logs.Error("read data from etcd error:%v",err)
+	if err != nil {
+		logs.Error("read data from etcd error:%v", err)
 		return
 	}
 
-	for _,data := range resp.Kvs{
-		logs.Debug("data key:%s, data value:%s",data.Key,data.Value)
+	for _, data := range resp.Kvs {
+		logs.Debug("data key:%s, data value:%s", data.Key, data.Value)
 	}
 
 }
