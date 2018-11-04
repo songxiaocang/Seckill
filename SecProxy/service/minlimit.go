@@ -16,8 +16,8 @@ func (p *MinLimit) Count(nowTime int64) (count int) {
 		p.curTime = nowTime
 		count = p.count
 	}
-	count++
-	p.count = count
+	p.count++
+	count = p.count
 	return
 }
 

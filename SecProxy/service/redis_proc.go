@@ -34,7 +34,7 @@ func WriteHandle() {
 func ReadHandle() {
 	for {
 		conn := secKillConf.RedisProxy2LayerPool.Get()
-		reply, err := conn.Do("LPOP", "recv_queue")
+		reply, err := conn.Do("RPOP", "recv_queue")
 		if err != nil {
 			logs.Error("no data get:%v", err)
 			conn.Close()
