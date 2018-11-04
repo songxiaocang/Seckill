@@ -2,7 +2,6 @@ package main
 
 import (
 	"Seckill/SecLayer/service"
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 )
 
@@ -34,6 +33,9 @@ func main() {
 	}
 	logs.Debug("【secLayer】init secikill config success")
 
-	beego.Run(":8083")
+	//执行业务操作
+	service.Run()
+
+	//beego.Run(":8083")
 
 }

@@ -3,18 +3,11 @@ package main
 import (
 	"Seckill/SecLayer/service"
 	"fmt"
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/config"
 	"github.com/astaxie/beego/logs"
 )
 
 var secLayerConf *service.SecLayerConf
-
-func InitConfigT() (err error) {
-	s := beego.AppConfig.String("test")
-	fmt.Printf("data:%s", s)
-	return
-}
 
 func InitConfig(fileType string, filePath string) (err error) {
 	secLayerConf = &service.SecLayerConf{}

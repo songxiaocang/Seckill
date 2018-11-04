@@ -4,6 +4,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 	"go.etcd.io/etcd/clientv3"
 	"sync"
+	"time"
 )
 
 var secLayerContext = &SecLayerContext{}
@@ -33,15 +34,14 @@ type SecProductInfoConf struct {
 	OnePersonBuyLimit int
 	BuyRate           float64
 	SoldMaxLimit      int
-	//Seclmt *SecLimit
-
+	Seclimit          *SecLimit
 }
 
 type SecRequest struct {
 	ProductId       int
 	Source          string
 	AuthCode        string
-	AccessTime      string
+	AccessTime      time.Time
 	Nance           string
 	UserId          int
 	UserAuthSign    string
@@ -56,7 +56,7 @@ type SecResponse struct {
 	UserId    int
 	Code      int
 	Token     string
-	TokenTime string
+	TokenTime int64
 }
 
 type SecLayerConf struct {
@@ -87,12 +87,14 @@ type SecLayerContext struct {
 	EtcdClient           *clientv3.Client
 	RwSecProductLock     sync.RWMutex
 
-	Group        sync.WaitGroup
-	SecLayerConf *SecLayerConf
+	WaitedGroup    sync.WaitGroup
+	SecLayerConfig *SecLayerConf
 
-	Handle2WriteChan chan *SecRequest
-	Read2HandleChan  chan *SecResponse
+	Read2HandleChan  chan *SecRequest
+	Handle2WriteChan chan *SecResponse
 
 	//,,,,
-
+	UserHistoryMap    map[int]*UserHistory
+	RwUserHistoryLock sync.RWMutex
+	ProductcountMgr   *ProductCountMgr
 }
